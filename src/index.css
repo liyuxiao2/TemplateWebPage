@@ -1,0 +1,157 @@
+/* General Reset */
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/font/montserrat-black-webfont.woff2") format("woff2"),
+         url("./assets/fonts/font/montserrat-black-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    background: url("assets/images/dragon.png") no-repeat center center fixed; /* Fixed background */
+    background-size: cover; /* Ensures the image covers the screen */
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    z-index: 0; /* Keep it behind all other content */
+}
+
+body, h1, button, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", Arial, sans-serif; /* Use Montserrat */
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #b91c1c; /* Red theme for Dragon Buffet */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #800000;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Navigation Buttons */
+#pages {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#pages button {
+    background-color: #800000; /* Dark red for buttons */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pages button:hover {
+    background-color: #b91c1c; /* Lighter red on hover */
+}
+
+#pages button:focus {
+    outline: none;
+    border: 2px solid #fff;
+}
+
+/* Content Section */
+#content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Food Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Food Container */
+.food-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: transform 0.3s ease-in;
+}
+
+.food-container:hover {
+    transform: scale(1.05);
+}
+
+.food-container:last-child {
+    border-bottom: none;
+}
+
+/* Food Title */
+.food-container h5 {
+    font-size: 1.5rem;
+    flex-grow: 1;
+    margin: 0;
+    color: #333;
+}
+
+/* Food Image */
+.food-bg {
+    width: auto; /* Preserve the natural width */
+    height: auto; /* Preserve the natural height */
+    max-width: 150px; /* Limit the width to prevent oversized images */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.card ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 5px 0;
+    font-size: 1rem;
+    color: #555;
+    text-align: center; /* Center-align the hours text */
+    border-bottom: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #pages button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    #content {
+        margin: 10px;
+        padding: 15px;
+    }
+}
